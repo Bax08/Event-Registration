@@ -1,0 +1,14 @@
+{%extends 'reg/layout.html'%}
+{%block body%}
+<p> EVENTS {{info}}</p>
+<ul>
+    {% for information in info %}
+        <li>{{information}}</li>
+    {%empty%}
+        <ul>No events Available yet. </ul>  
+
+    {%endfor%}   
+</ul>   
+<a href="{% url 'reg:new_info'%}"> Add New Event</a>            
+{%endblock%}
+

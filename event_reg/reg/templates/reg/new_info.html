@@ -1,0 +1,20 @@
+{% extends 'reg/layout.html'%}
+
+{%block body%}
+<p>Add a new event: </p>
+
+<form action="{% url 'reg:new_info'%}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button name="submit"> ADD EVENT </button>
+
+
+</form>
+
+
+
+
+
+{%endblock%}
+
